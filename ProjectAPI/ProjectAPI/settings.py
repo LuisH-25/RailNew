@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     "django_filters",
     'drf_yasg',
 ]
-CSRF_TRUSTED_ORIGINS = ['https://railnew-production.up.railway.app/']
+CSRF_TRUSTED_ORIGINS = ['https://railnew-production.up.railway.app']
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -99,7 +99,7 @@ DATABASES = {
         }
     }
 
-
+mysql://root:lIVa5i5Q8VH3KNyCItx8@containers-us-west-108.railway.app:5847/railway
 #mysql://root:lIVa5i5Q8VH3KNyCItx8@containers-us-west-108.railway.app:5847/railway
 
 

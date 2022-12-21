@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     "django_filters",
     'drf_yasg',
 ]
-
+CSRF_TRUSTED_ORIGINS = ['https://railnew-production.up.railway.app/']
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -81,12 +81,26 @@ WSGI_APPLICATION = 'ProjectAPI.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'railway',
+            'USER': 'root',
+            'PASSWORD': 'lIVa5i5Q8VH3KNyCItx8',
+            'HOST': 'containers-us-west-108.railway.app',
+            'PORT': '5847',
+        }
     }
-}
+
+
+#mysql://root:lIVa5i5Q8VH3KNyCItx8@containers-us-west-108.railway.app:5847/railway
 
 
 # Password validation
